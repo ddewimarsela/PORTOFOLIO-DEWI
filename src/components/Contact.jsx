@@ -1,4 +1,4 @@
-import { Mail, Download, Check } from './icons'
+import { Mail, Download, Check, WhatsApp, LinkedIn } from './icons'
 import { useState } from 'react'
 import { personalInfo } from '../data/portfolioData'
 
@@ -39,46 +39,70 @@ export default function Contact() {
               {ctaContact.paragraph}
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto">
               <a
                 href={`mailto:${ctaContact.email}?subject=Collaboration Opportunity Discussion - Dewi Portfolio`}
                 onClick={handleCopyEmail}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#FF8438] hover:bg-[#e87228] text-white text-xs sm:text-sm font-semibold shadow-lg shadow-orange-500/25 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                className="group inline-flex min-h-14 items-center gap-3 rounded-2xl border border-neutral-700 bg-[#232323] px-4 py-3 text-left text-white transition-all duration-200 hover:border-neutral-500 hover:bg-neutral-800 hover:-translate-y-0.5"
               >
-                {copied ? <Check size={16} /> : <Mail size={16} />}
-                <span>{copied ? 'Email copied & opening mail...' : ctaContact.emailButtonText}</span>
+                {copied ? <Check size={20} className="text-neutral-300" /> : <Mail size={20} className="text-neutral-300" />}
+                <span>
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-neutral-500">
+                    Email
+                  </span>
+                  <span className="block text-sm font-semibold text-neutral-200 group-hover:text-white transition-colors">
+                    {copied ? 'Copied' : 'Get in touch'}
+                  </span>
+                </span>
               </a>
 
               <a
                 href={ctaContact.resumeFile}
                 download="CV-DEWI MARSELA PUTRI.pdf"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#232323] hover:bg-neutral-800 text-white text-xs sm:text-sm font-semibold border border-neutral-700/80 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                className="group inline-flex min-h-14 items-center gap-3 rounded-2xl border border-neutral-700 bg-[#232323] px-4 py-3 text-left text-white transition-all duration-200 hover:border-neutral-500 hover:bg-neutral-800 hover:-translate-y-0.5"
               >
-                <Download size={16} />
-                <span>{ctaContact.resumeButtonText}</span>
+                <Download size={20} className="text-neutral-300" />
+                <span>
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-neutral-500">
+                    Resume
+                  </span>
+                  <span className="block text-sm font-semibold">
+                    Download CV
+                  </span>
+                </span>
               </a>
-            </div>
 
-            {/* Configured Contact Note */}
-            <p className="text-[11px] text-neutral-500 mt-6">
-              <span className="text-neutral-400 font-medium">{ctaContact.email}</span>
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-4 text-xs text-neutral-400">
               <a
-                href={`tel:${ctaContact.phone}`}
-                className="hover:text-[#FF8438] transition-colors"
+                href={`https://wa.me/${ctaContact.phone.replace(/^0/, '62')}`}
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex min-h-14 items-center gap-3 rounded-2xl border border-neutral-700 bg-[#232323] px-4 py-3 text-left transition-all duration-200 hover:border-[#25D366]/60 hover:bg-neutral-800 hover:-translate-y-0.5"
               >
-                {ctaContact.phone}
+                <WhatsApp size={22} className="text-[#25D366] flex-shrink-0" aria-hidden="true" />
+                <span>
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-neutral-500">
+                    WhatsApp
+                  </span>
+                  <span className="block text-sm font-semibold text-neutral-200 group-hover:text-[#25D366] transition-colors">
+                    {ctaContact.phone}
+                  </span>
+                </span>
               </a>
               <a
                 href={ctaContact.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-[#FF8438] transition-colors"
+                className="group inline-flex min-h-14 items-center gap-3 rounded-2xl border border-neutral-700 bg-[#232323] px-4 py-3 text-left transition-all duration-200 hover:border-[#0A66C2]/60 hover:bg-neutral-800 hover:-translate-y-0.5"
               >
-                LinkedIn
+                <LinkedIn size={22} className="text-[#0A66C2] flex-shrink-0" aria-hidden="true" />
+                <span>
+                  <span className="block text-[10px] font-bold uppercase tracking-wider text-neutral-500">
+                    LinkedIn
+                  </span>
+                  <span className="block text-sm font-semibold text-neutral-200 group-hover:text-[#0A66C2] transition-colors">
+                    View my profile
+                  </span>
+                </span>
               </a>
             </div>
           </div>
