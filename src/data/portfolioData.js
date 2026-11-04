@@ -21,6 +21,11 @@ import wordpress2364 from '../assets/Wordpress/Screenshot (2364).png'
 import wordpress2365 from '../assets/Wordpress/Screenshot (2365).png'
 import wordpress2434 from '../assets/Wordpress/Screenshot (2434).png'
 import tani2996 from '../assets/Tani/Screenshot (2996).png'
+import tani2999 from '../assets/Tani/Screenshot (2999).png'
+import tani3000 from '../assets/Tani/Screenshot (3000).png'
+import tani3002 from '../assets/Tani/Screenshot (3002).png'
+import tani3006 from '../assets/Tani/Screenshot (3006).png'
+import tani3011 from '../assets/Tani/Screenshot (3011).png'
 import certCJDC2MZP from '../assets/sertifikat/CERT-CJDC2MZP (2).jpg'
 import certDHRAZSME from '../assets/sertifikat/CERT-DHRAZSME (2).jpg'
 import certEFZ2ZWXX from '../assets/sertifikat/CERT-EFZ2ZWXX (2).jpg'
@@ -286,7 +291,7 @@ export const projectsData = [
     tagline: "Farmer Group Data Management System",
     description: "Mengembangkan sistem pengelolaan data Kelompok Tani Sidomukti melalui aplikasi web berbasis Laravel dengan 6 fitur utama.",
     previewImage: tani2996,
-    screenshots: [tani2996],
+    screenshots: [tani2996, tani2999, tani3000, tani3002, tani3006, tani3011],
     technologies: ["PHP", "Laravel", "MySQL", "Web Application"],
     deliverables: ["6 Core Features", "Farmer Group Data Management", "Laravel Web Application"],
     liveUrl: "#contact",

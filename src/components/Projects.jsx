@@ -233,6 +233,33 @@ export default function Projects() {
                 </div>
               )}
 
+              {selectedProject.screenshots?.length > 1 && (
+                <div>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2">
+                    Project Gallery
+                  </h4>
+                  <div className="grid grid-cols-2 gap-3">
+                    {selectedProject.screenshots.slice(1).map((screenshot, index) => (
+                      <a
+                        key={`${screenshot}-${index}`}
+                        href={screenshot}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="block overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900"
+                      >
+                        <img
+                          src={screenshot}
+                          alt={`${selectedProject.title} screenshot ${index + 2}`}
+                          className="w-full aspect-video object-cover hover:scale-105 transition-transform duration-300"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Description */}
               <div>
                 <h4 className="text-xs font-bold uppercase tracking-wider text-neutral-400 mb-2">
