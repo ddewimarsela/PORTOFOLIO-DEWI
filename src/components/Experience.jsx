@@ -10,7 +10,6 @@ import iotPhotoOne from '../assets/IOT/WhatsApp Image 2026-11-02 at 16.08.35.jpe
 import iotPhotoTwo from '../assets/IOT/WhatsApp Image 2026-11-02 at 15.58.02.jpeg'
 import dprdPhotoOne from '../assets/DPRD/dprd1.jpeg'
 import dprdPhotoTwo from '../assets/DPRD/dprd2.jpeg'
-import siPhotoOne from '../assets/SI/SI1.jpeg'
 import siPhotoTwo from '../assets/SI/SI2.jpeg'
 import siPhotoThree from '../assets/SI/SI3.jpeg'
 import urnaPhotoOne from '../assets/urna/urna 1.jpeg'
@@ -40,7 +39,6 @@ const dprdMedia = [
 ]
 
 const siMedia = [
-  { src: siPhotoOne, alt: 'Ruang Raya Indonesia project documentation', fit: 'object-cover' },
   { src: siPhotoTwo, alt: 'Ruang Raya Indonesia project activity documentation', fit: 'object-cover' },
   { src: siPhotoThree, alt: 'Ruang Raya Indonesia project presentation documentation', fit: 'object-cover' },
 ]
@@ -52,7 +50,7 @@ const urnaMedia = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-28 px-6 border-t border-slate-200/80 relative">
+    <section id="experience" className="py-28 px-6 border-t border-slate-200/80 relative [content-visibility:auto] [contain-intrinsic-size:900px]">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-16">
@@ -132,6 +130,7 @@ export default function Experience() {
                             alt={media.alt}
                             className={`w-full h-full ${media.fit} hover:scale-105 transition-transform duration-300`}
                             loading="lazy"
+                            decoding="async"
                           />
                         </a>
                       ))}
@@ -160,7 +159,7 @@ export default function Experience() {
                     </div>
                   )}
 
-                  {exp.organization === 'Universitas Putra Bangsa - Capstone Project Codex IoT' && (
+                  {exp.organization === 'Universitas Putra Bangsa, Capstone Project Codex IoT' && (
                     <div className="grid grid-cols-2 gap-2 mt-5">
                       {iotMedia.map((media) => (
                         <a

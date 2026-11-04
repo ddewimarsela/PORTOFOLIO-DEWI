@@ -9,7 +9,7 @@ const englishClubMedia = [
 
 export default function Organizations() {
   return (
-    <section id="organizations" className="py-20 sm:py-28 px-4 sm:px-6 bg-[#FBFBFC]">
+    <section id="organizations" className="py-20 sm:py-28 px-4 sm:px-6 bg-[#FBFBFC] [content-visibility:auto] [contain-intrinsic-size:700px]">
       <div className="max-w-5xl mx-auto">
         <div className="max-w-2xl mb-10 sm:mb-12">
           <span className="text-xs font-bold uppercase tracking-wider text-[#FF8438]">
@@ -80,6 +80,7 @@ export default function Organizations() {
                         alt={media.alt}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         loading="lazy"
+                        decoding="async"
                       />
                     </a>
                   ))}

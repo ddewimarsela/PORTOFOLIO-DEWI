@@ -38,7 +38,7 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="py-12 px-4 sm:px-6 bg-white">
+    <section id="projects" className="py-12 px-4 sm:px-6 bg-white [content-visibility:auto] [contain-intrinsic-size:800px]">
       {/* Full-width dark container with rounded corners and subtle abstract orange glows */}
       <div className="max-w-6xl mx-auto rounded-3xl sm:rounded-[2.5rem] bg-[#171717] text-white p-6 sm:p-12 md:p-16 relative overflow-hidden shadow-2xl border border-neutral-800">
         {/* Subtle decorative background: diagonal lines & warm orange glowing accents */}
@@ -127,6 +127,7 @@ export default function Projects() {
                         alt={project.title}
                         className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
+                        decoding="async"
                       />
                     ) : (
                       <div className="w-full h-full bg-neutral-900 rounded-lg flex items-center justify-center text-neutral-600 text-xs">
@@ -227,6 +228,7 @@ export default function Projects() {
                     src={selectedProject.previewImage}
                     alt={selectedProject.title}
                     className="w-full max-h-72 object-cover object-top"
+                    decoding="async"
                   />
                 </div>
               )}

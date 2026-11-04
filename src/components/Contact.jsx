@@ -52,7 +52,7 @@ export default function Contact() {
 
               <a
                 href={ctaContact.resumeFile}
-                download="Resume_Dewi_Marsela_Putri.pdf"
+                download="CV-DEWI MARSELA PUTRI.pdf"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#232323] hover:bg-neutral-800 text-white text-xs sm:text-sm font-semibold border border-neutral-700/80 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
               >
                 <Download size={16} />
@@ -62,8 +62,25 @@ export default function Contact() {
 
             {/* Configured Contact Note */}
             <p className="text-[11px] text-neutral-500 mt-6">
-              Active email: <span className="text-neutral-400 font-medium">{ctaContact.email}</span>
+              <span className="text-neutral-400 font-medium">{ctaContact.email}</span>
             </p>
+
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mt-4 text-xs text-neutral-400">
+              <a
+                href={`tel:${ctaContact.phone}`}
+                className="hover:text-[#FF8438] transition-colors"
+              >
+                {ctaContact.phone}
+              </a>
+              <a
+                href={ctaContact.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-[#FF8438] transition-colors"
+              >
+                LinkedIn
+              </a>
+            </div>
           </div>
         </div>
       </div>

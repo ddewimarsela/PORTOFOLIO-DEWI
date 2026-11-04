@@ -66,6 +66,8 @@ export default function Hero() {
                 alt={personalInfo.fullName}
                 className="relative z-10 w-full h-auto object-contain select-none pointer-events-none block"
                 loading="eager"
+                fetchPriority="high"
+                decoding="async"
               />
 
               {/* CTA Buttons — overlaid on the orange arch area at bottom of photo */}
